@@ -38,6 +38,8 @@ set enc=utf8
 set encoding=utf-8 
 set fencs=utf8,gbk,gb2312,gb18030
 
+colorscheme solarized
+
 " NERDTree config
 " open a NERDTree automatically when vim starts up
 autocmd vimenter * NERDTree
