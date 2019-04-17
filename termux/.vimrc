@@ -1,0 +1,62 @@
+""""""""""""""""""""""""""
+" vimrc configuration
+""""""""""""""""""""""""""
+set nocompatible
+syntax on
+set nowrap
+set encoding=utf8
+
+call plug#begin('~/.vim/plugged')
+" for easy access to the file system on the left side "
+Plug 'scrooloose/nerdtree'
+" quick tag browser for the current file "
+Plug 'majutsushi/tagbar'
+Plug 'ervandew/supertab'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'Lokaltog/vim-powerline'
+Plug 'fatih/vim-go'
+Plug 'nsf/gocode'
+call plug#end()
+
+set number
+set relativenumber
+set t_Co=256
+set background=dark
+set nobackup
+set autochdir
+set ignorecase smartcase
+set incsearch
+set hlsearch
+set smartindent
+set laststatus=2
+set cursorcolumn
+set cursorline
+set tabstop=4 shiftwidth=4 expandtab
+
+set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
+set enc=utf8
+set encoding=utf-8 
+set fencs=utf8,gbk,gb2312,gb18030
+
+" NERDTree config
+" open a NERDTree automatically when vim starts up
+autocmd vimenter * NERDTree
+"open a NERDTree automatically when vim starts up if no files were specified
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"open NERDTree automatically when vim starts up on opening a directory
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
+"map F2 to open NERDTree
+map <F12> :NERDTreeToggle<CR>
+"close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+map <F11> :TagbarToggle<CR>
+
+let g:Powerline_symbols = 'fancy'
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
