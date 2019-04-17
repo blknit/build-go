@@ -30,7 +30,7 @@ set hlsearch
 set smartindent
 set laststatus=2
 set cursorcolumn
-set cursorline
+"set cursorline
 set tabstop=4 shiftwidth=4 expandtab
 
 set fileencodings=utf-8,gb2312,gb18030,gbk,ucs-bom,cp936,latin1
