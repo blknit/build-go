@@ -15,7 +15,7 @@ Plug 'ervandew/supertab'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Lokaltog/vim-powerline'
 Plug 'fatih/vim-go'
-Plug 'nsf/gocode'
+Plug 'nsf/gocode', {'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
 Plug 'colepeters/spacemacs-theme.vim'
 call plug#end()
 
