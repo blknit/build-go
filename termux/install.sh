@@ -7,7 +7,8 @@ pkg install vim-python -y
 pkg install tmux -y
 pkg install git -y
 pkg install golang -y
-pkg install curl
+pkg install curl -y
+pkg install sl -y
 
 sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)"
 
