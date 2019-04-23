@@ -11,6 +11,8 @@ pkg install curl -y
 pkg install sl -y
 pkg install cmatrix -y
 
+alias cs=cmatrix
+
 sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)"
 
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
