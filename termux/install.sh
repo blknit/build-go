@@ -9,6 +9,7 @@ pkg install git -y
 pkg install golang -y
 pkg install curl -y
 pkg install sl -y
+pkg install cmatrix -y
 
 sh -c "$(curl -fsSL https://github.com/Cabbagec/termux-ohmyzsh/raw/master/install.sh)"
 
