@@ -20,3 +20,6 @@ cp vimrc ~/.vimrc
 cp zshrc ~/.zshrc
 
 vim +PlugInstall +GoInstallBinaries +qall
+
+cd ~/.vim
+git clone https://github.com/Blackrush/vim-gocode.git
